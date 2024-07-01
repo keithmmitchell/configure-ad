@@ -377,52 +377,139 @@ Keep cicking OK for Jane Doe to be a member of Domain Admins.
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/d6d22727-e1cb-4239-ae34-a711cde03671)
 
+Now I Logout, close the Remote Desktop Connection and log back in as mydomain.com\jane_admin. 
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/e0c8019e-c997-4cd7-8a8d-69bf294c61b7)
 
+Next is to joine Client-1 to the domain.  First is to set Client-1's DNS settings to the DC's private IP address from Azure Portal.
 
+We can see the private IP address of DC-1 is 10.0.0.4.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/35191295-fba8-46e6-9dbd-53ef981996f0)
 
+In Azure, select Client-1 then Network Settings.  From there the NIC can be selected.  Here it is client-1104_z1.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/4b9e36c0-0745-4244-98d0-e2f1dd64dd08)
 
+Then select DNS Servers.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/b9e9222c-52d7-4f95-a190-031f662f15ba)
 
+Select Custom, enter 10.0.0.4 then click Save.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/36d86de5-89f4-4935-a9b1-df2c69d5a029)
 
+Next Client-1 needs to be restarted to flush the DNS cache.  Back at Client-1 select Restart.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/88df70d6-53af-4d07-a94d-dacac1f43b05)
 
+We now need to log back in as labuser because it's not joined to the domain.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/e22ed187-3f2c-4f5e-9551-043a690e22cf)
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/0b1d436b-68e1-4432-8a6b-bc4cb780d79c)
 
+Enter command prompt and type ipconfig/all to inspect the DNS settings and see DC-1's IP address 10.0.0.4.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/920129d6-4d46-4825-989f-7da6bf66fd59)
 
+Now to connect Client-1 to the domain go into Settings, select About then Rename this PC (Advanced) 
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/8d9ecb4f-eb6c-4b29-854a-d5423fac39f7)
 
+Then Change to change it's domain or workgroup
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/886d235b-076f-4385-a5dd-7722aabc93c3)
 
+Select Domain then entermydomain.com
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/3781941b-f369-44a8-b5d6-377a85b94301)
 
+We are then prompted to enter the credentials of an account with permission to join the domain.  Enter mydomain.com\jane_admin and Passw0rd then click OK.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/61c9ea28-69e2-432e-b273-1d9301554bf1)
 
+We can now see the dialog box welcoming us to the domain.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/1682bd0a-7974-46e6-9dca-ac7eb5006fdd)
 
+Client-1 now needs to be restarted so restart now.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/a9f959fe-b857-4eaa-ab56-0ba6b0e51d17)
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/7b5507a5-e2db-4613-9d98-1e542a2d28c0)
+
+Log back into Client-1 but this time use the Jane_Admin credentials to log into the domain.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/840bcb18-f950-47c9-990e-3cd030a98462)
+
+Go to System Properties, Remote Desktop then under Use Accounts click Select users that can remotely access this PC.
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/0b1568b1-8297-4040-b1e3-34a2543559bb)
+
+Click Add
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/ea9e0bd8-b433-4096-8130-76e43bd9256d)
+
+Then instead of adding individual users enter domain users for the Domain Users group then click Check Names.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/375bc04c-6789-49ff-b7d7-1610c4e37880)
+
+Click OK and we can see the group has been added and click OK.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/15aaaf44-5f54-4ead-ad31-962926b8745a)
+
+In DC-1 go back to Active Directory Users and Computers
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/1f9aab14-036e-4caf-a2a6-ccba1aca0dcb)
+
+In users under mydomain.com we can see the Domain Users group and by right clicking and selecting Properties we can see the members of that group. 
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/3311f739-ce00-4bd2-969b-deeb427c81ea)
 
 
 
