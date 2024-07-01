@@ -735,6 +735,6 @@ For the new permissions to work on Client-1 I need to logout then log back in ag
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/5eacd608-84a4-490d-8f55-0030e2e89b15)
 
-
+That brings us to the end of this lab.
 
 
