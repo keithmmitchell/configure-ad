@@ -570,7 +570,34 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/8e9f1e5d-382c-410c-8e34-ce97609a2d0e)
 
-Run the script and observe the accounts being created. 10,000 accounts will be created with the password "Password1"
+Run the script, by either pressing F5 or the green arrow, and observe the accounts being created. 10,000 accounts will be created with the password "Password1" in the _EMPLOYEES Organisational Unit.  Back in Active Directory Users And Computers we can see in accounts in the _EMPLOYEES OU
 
 <br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/fc636516-7c0c-459f-a965-a9860dd067a3)
+
+Back in Client-1 sign out as jane_admin then in Remote Desktop log in using one of the newly created accounts. 
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/77f82d61-00e3-49d0-b250-6ef7f576719b)
+
+We can see in the command prompt in Client-1 we are logged in as the beg.bir account.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/40975d4c-60b5-4df3-b53f-de6bccabe9e0)
+
+Back in DC-1 we can see if we right click a username then select Properties we can go to the Accounts tab.  We can see the account can be unlocked from there if it ever becomes locked.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/5972bd9f-51ed-4619-9119-232c65e633e4)
+
+Also by right clicking then name we can change the password.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/d94b5d16-7cce-4eb2-b65f-1cbe2efc5397)
+
 
