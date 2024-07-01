@@ -161,7 +161,77 @@ Then on the physical machine search remote destkop for Remote Desktop Connection
 
 <br />
 
-Select More Choices then enter username labuser and password Passw0rd1234 and click OK.
+Select More Choices then enter username labuser and password Passw0rd1234 and click OK to connect.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/96188f45-d3d1-4995-974b-1eb5aad67546)
+
+Click Yes when the message appears about the identity not being verified.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/5bc44a2a-97a1-4abb-b201-56b091311bbc)
+
+Back in Azure we need to confirm the IP address of DC-1.  So back in Virtual Machines select DC-1 and under Networking select Network Settings.  There we can see the private IP address is 10.0.0.4.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/b57ec6df-8606-4091-b94f-a3debe40b613)
+
+Back in Client-1 select Yes to allow the PC to be discoverable by other devices on the network.  Search Powershell and use the command ping -t 10.0.0.4 and we can see it times out.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/91fbdc42-cb23-4dc4-a24c-c71ff2220bf9)
+
+Go back to DC-1 in Azure and we can see the public IP address is 51.11.179.136
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/15117bf8-6936-44e0-ad61-e724f31fd601)
+
+We can then open another instance of Remote Desktop Computer and log into DC-1 using the 51.11.179.136 IP address, the labuser username and Passw0rd1234 password.  Again, select Yes when the identity is not verified.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/24f96568-7ea5-459d-ad3e-1fb7fd4edd93)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/8d245bcb-f26c-43f9-b82f-89939c327586)
+
+<br />
+
+In the Domain Controller search wf.msc to bring up the Firewall and select Inbound Rules
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/4bf93b93-65d6-4343-9610-f0cd1a7c3118)
+
+<br />
+
+Look for the Core Network Diagnostics ICMPv4 rules and right click to enable them.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/be428397-21f0-4c7f-9719-683af415e82b)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/09993623-0e67-44cc-bdc0-1ea21d4dab3c)
+
+If we go back to Client-1 we can now see the pings are successful.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/8150122b-89d1-46cd-b772-c1988596d808)
+
+
+
+
+
+
+
+
 
 
 
