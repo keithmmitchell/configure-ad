@@ -676,6 +676,12 @@ If I open the Read Access folder then right click and select New>Text Document I
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/2ef80865-40bb-45ba-998b-94a1869750ff)
 
+If there is a file in the Read Access folder then I can open it to read.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/928f76e9-c52f-493e-8903-e9b44b01351e)
+
 If I open the Write Access folder then right click and select New>Text Document then the document is created.
 
 <br />
