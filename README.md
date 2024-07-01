@@ -511,19 +511,66 @@ In users under mydomain.com we can see the Domain Users group and by right click
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/3311f739-ce00-4bd2-969b-deeb427c81ea)
 
+Now I create additional users and attempt to log into Client-1 with one of them.  I do that by opening Powershell_ise as an administrator in DC-1.  
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/bb920ff7-7db9-4bac-9e0e-1c7d16568a83)
 
+Inside Powershell open a new file and enter the following script:
 
+ # ----- Edit these Variables for your own Use Case ----- #
+$PASSWORD_FOR_USERS   = "Password1"
+$NUMBER_OF_ACCOUNTS_TO_CREATE = 10000
+# ------------------------------------------------------ #
 
+Function generate-random-name() {
+    $consonants = @('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z')
+    $vowels = @('a','e','i','o','u','y')
+    $nameLength = Get-Random -Minimum 3 -Maximum 7
+    $count = 0
+    $name = ""
 
+    while ($count -lt $nameLength) {
+        if ($($count % 2) -eq 0) {
+            $name += $consonants[$(Get-Random -Minimum 0 -Maximum $($consonants.Count - 1))]
+        }
+        else {
+            $name += $vowels[$(Get-Random -Minimum 0 -Maximum $($vowels.Count - 1))]
+        }
+        $count++
+    }
 
+    return $name
 
+}
 
+$count = 1
+while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
+    $fisrtName = generate-random-name
+    $lastName = generate-random-name
+    $username = $fisrtName + '.' + $lastName
+    $password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
 
+    Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
+    
+    New-AdUser -AccountPassword $password `
+               -GivenName $firstName `
+               -Surname $lastName `
+               -DisplayName $username `
+               -Name $username `
+               -EmployeeID $username `
+               -PasswordNeverExpires $true `
+               -Path "ou=_EMPLOYEES,$(([ADSI]`"").distinguishedName)" `
+               -Enabled $true
+    $count++
+}
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/8e9f1e5d-382c-410c-8e34-ce97609a2d0e)
 
+Run the script and observe the accounts being created. 10,000 accounts will be created with the password "Password1"
 
-
+<br />
 
