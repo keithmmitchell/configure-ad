@@ -30,7 +30,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-From the main menu select Virtual Machines to bring up the Virtual Mchines blade then select Create An Azure Virtual Machine.
+From the main menu select Virtual Machines to bring up the Virtual Machines blade then select Create An Azure Virtual Machine.
 </p>
 <br />
 
