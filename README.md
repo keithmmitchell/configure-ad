@@ -329,6 +329,67 @@ We will now create two Organisational Units by right clicking Mydomain.com>New>O
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/b53d4321-10df-4d15-96d2-402f40e4d636)
 
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/cb0a4d80-3217-499f-8784-6b97a6ff2099) 
+
+We will now create a new Admin account by clicking the _ADMINS Organisational Unit then right clicking New>User and we will call the user Jane Doe with a User Logon Name of jane_admin then click Next.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/37d34d69-7a97-4bf1-9ead-c482a7d14443)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/940a2385-45bd-4784-98ea-4eb0812dd9d0)
+
+Enter a password.  In this lab I used Passw0rd then unchecked password must be changed at next logon and checked password never expires then click Next then Finish.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/18ab6cb7-8eec-4e1f-95a3-6f08b48a81ee)
+
+We now need to make this an Admin account by assigning it to the Domain Admins group.  We do this by right clicking it and selecting Properties.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/6fc91c93-56db-4c21-b6f3-86b5a4bd9bef)
+
+In the Member Of tab we click Add.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/880b1a43-9015-48c9-a3b5-aaf42a5d4176)
+
+In Select Groups enter domain then click Check Names then select Domain Admins.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/02ffd4c6-1932-46d1-9a4f-666faebb4eb3)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/034a31c5-05f5-4a92-961f-ec8f83719ee2)
+
+Keep cicking OK for Jane Doe to be a member of Domain Admins.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/d6d22727-e1cb-4239-ae34-a711cde03671)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
