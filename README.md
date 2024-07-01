@@ -688,9 +688,57 @@ If I open the Write Access folder then right click and select New>Text Document 
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/5cbcf176-b7a3-4ce7-a6de-130af1251c06)
 
+Now on DC1 create Security Groups OU and an Accountants group then configure Read and Write permissions for the "Accounting" folder.  Back in Active Directory Users and Computers right click mydomain to create the OU.
 
+<br />
 
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/cd7e06dc-bdab-448f-b957-def7d7405cd8)
 
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/187d0068-46e0-46cd-a979-1ab43c6c9bfe)
+
+In the _SECURITY_GROUP right click and select New>Group
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/a4f9afae-e02b-440f-94d4-9181d0e1f003)
+
+In the New Object - Group window enter ACCOUNTANTS and click OK.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/4e3cba7f-dedd-4cd8-b3aa-65a62cdd4304)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/4afb5e3f-7717-43b7-9c19-bde946c9d41d)
+
+Go back to the C:\ drive and right click the Accounting folder, select Properties then the Sharing tab then select Share.  Add the ACCOUNTANTS group and give it Read and Write permissions.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/edca0b8e-838e-4fab-8a85-2e0ca473c9fb)
+
+Back in Client-1 I can try and access the folder using the beg.bir account and get a message saying that access is denied.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/f222d605-32dc-422c-bedc-d27c2def7cfa)
+
+If I go back to DC1 and add beg.bir to the ACCOUNTANTS group I will then have access.
+
+In the ACCOUNTANTS group in Active Directory Users and Computers, right click and select Properties.  Click on the Memebers tab and select Add.  From there enter the name beg.bir and click OK.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/762d9119-5185-4602-bd82-91a8c36e32e7)
+
+For the new permissions to work on Client-1 I need to logout then log back in again as beg.bir and will have access to the accounting folder.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/5eacd608-84a4-490d-8f55-0030e2e89b15)
 
 
 
