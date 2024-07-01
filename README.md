@@ -594,10 +594,98 @@ Back in DC-1 we can see if we right click a username then select Properties we c
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/5972bd9f-51ed-4619-9119-232c65e633e4)
 
-Also by right clicking then name we can change the password.
+Also by right clicking then name we can change the password and unlock from there as well if required.
 
 <br />
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/d94b5d16-7cce-4eb2-b65f-1cbe2efc5397)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/25286930-c2ec-4420-bfbb-355c65f568bc)
+
+Next I will demonstrate file share permissions.  
+
+On DC1 I will create four folders on the c:\ drive "read access", "write access", "no access" and "accounting".
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/3a562fb4-7cdd-4aaf-9ec5-8fbba3a716d9)
+
+The following permissions will be set:
+
+- Folder: "Read Access", Group: "Domain Users", Permission: "Read"
+- Folder: "Write Access", Group: "Domain Users", Permission: "Read/Write"
+- Folder: "No Access", Group: "Domain Admins", Permission: "Read/Write"
+
+Right click the Read Access folder and select Properties then the Sharing tab then Share.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/ab91d681-be4e-46f3-bab6-1f20407e2ca1)
+
+Type domain users then click Add
+
+<br/>
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/1990da2f-b9ec-4295-b725-9dbb22585635)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/867b0e02-b957-4c26-9de6-f7a424f11ab9)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/b755be48-0e08-4b42-9b7c-4ba5e763a797)
+
+Then give the Write Access folder Write Access.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/815800da-de51-4058-a2d4-ba8bfcfda5e7)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/da67ffb8-f0ac-4144-8db2-a43e750e4e2c)
+
+For the No Access folder give the Domain Admins the "Read/Write" permissions so standard users won't have access.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/b8ff5557-33a2-4bcd-9730-f6124c522364)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/435e049b-2fbe-4c5d-9d18-4af90a057011)
+
+On Client-1 navigate to the shared folders by going to File Explorer and enter \\DC1 in the address bar then Return.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/95c78dc5-7632-4f06-a8e0-7c2176578bea)
+
+If I try to access the NO Access folder I get the dialog saying I don't have permission.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/b46ef64e-e5a5-496e-86be-ffb3690273a5)
+
+If I open the Read Access folder then right click and select New>Text Document I get a dialog saying access is denied because I need permission.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/2ef80865-40bb-45ba-998b-94a1869750ff)
+
+If I open the Write Access folder then right click and select New>Text Document then the document is created.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/5cbcf176-b7a3-4ce7-a6de-130af1251c06)
+
+
+
+
+
+
 
 
