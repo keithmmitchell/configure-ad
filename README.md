@@ -219,11 +219,140 @@ Look for the Core Network Diagnostics ICMPv4 rules and right click to enable the
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/09993623-0e67-44cc-bdc0-1ea21d4dab3c)
 
-If we go back to Client-1 we can now see the pings are successful.
+If we go back to Client-1 we can now see the pings are successful and press Ctrl+C to stop the pings.
 
 <br />
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/8150122b-89d1-46cd-b772-c1988596d808)
+
+Now we have connectivity we can install Active Directory from Server Manager on DC-1.  Select Add Roles and Features.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/fae5e83d-e7e1-479f-acb1-616fa39e6e4d)
+
+Click Next.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/2d977134-e943-4e4e-a857-523a14a7398f)
+
+Then Next.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/816baf0f-b288-4210-be2a-c89e47f579e1)
+
+We can see DC-1 is selected then click NExt.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/2101f420-29f9-4f3e-8486-b4419fd81fc7)
+
+From the list select Active Directory Domain Services.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/617dd677-8d22-4a77-8f7b-18645046d8ac)
+
+Then click Add Features.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/b81995f7-d851-44b9-8578-f6965194764e)
+
+Keep clicking Next and then finally Install.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/19595c80-32da-4625-9fe4-747aff4b0654)
+
+Once it's installed click Close.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/74d8661c-911d-4166-b990-590338744503)
+
+The Server still needs to be promoted to a Domain Controller so click on the notification to bring up the blue link to select.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/09f342f0-f599-4fb5-894c-c242d754c72a)
+
+In the Active Directory Domain Services Configuration Wizard select Add A New Forest then enter the Root Domain Name and select Next.  In this lab I have named it mydomain.com.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/b89aac68-3cb2-41bd-8337-eb3f3eecb313)
+
+In the next window enter a password. For this lab I used Passw0rd.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/6c3f273f-32cd-49f1-982c-e2ba05b6a66e)
+
+Keep clicking Next then in Additional Options MYDOMAIN will get poulated for the NetBIOS domain name.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/0e202ac9-2383-4987-9cb5-db1955e6c475)
+
+Once all the prerequisites have been checked click on Install.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/f0e172d5-8477-4a87-a44f-270c072c9d7b)
+
+Once it has installed the connection is disconnected and need to reconnect throught Remote Desktop.  Since it is now part of the domain I need to login in with the Fully Qualified Domain Name mydomain.com\labuser.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/846f17bf-788b-4fbc-a508-2fdf69a6484b)
+
+Next I'll create some Organisational Units and an Administritive User.  To do this start by clicking Tools then select Active Directory Users and Computers.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/923c6fcf-0ca3-4699-928e-2f49f68e214c)
+
+We will now create two Organisational Units by right clicking Mydomain.com>New>Organisational Unit and calling one _EMPLOYEES and the other _ADMMINS.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/eac4d157-9891-47d9-8446-abb1a566570c)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/f6f12055-0342-4e8b-8fde-171450710241)
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/b53d4321-10df-4d15-96d2-402f40e4d636)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
