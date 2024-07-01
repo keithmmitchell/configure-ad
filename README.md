@@ -56,7 +56,7 @@ Select Create New under Resource Group and give it a name then click OK.  I have
 
 Enter the following configuration:
 
-- Virtual MAchine Name: DC1
+- Virtual Machine Name: DC1
 - Region (Europe) UK South
 - Image: Windows Server 2022 Datacenter
 - Size: Standard_E2s_v3 - 2vcpus, 16GiB memory
@@ -80,6 +80,62 @@ Once the validation is passed click Create.
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/65fc12d9-7ee0-4f89-a522-c6af71a6b604)
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/ab2fc7d6-289e-411b-8194-d10c199d483c)
+
+Create the client machine using the same steps as above with the following configuration:
+
+- Resource Group: AD-Lab
+- Virtual Machine Name: Client-1
+- Region: (Europe): UK South
+- Image: Windows 10 Pro
+- Size: Standard_E2s_v3 - 2vcpus, 16GiB memory
+- Username: labuser
+- Password: Passw0rd1234
+
+Then check the box to confirm licensing and then Next to reach Networking.
+
+<br />
+
+
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/63434afd-83d7-40ec-b55e-4631e90fc318)
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/ec9affbb-c603-46da-b3ff-b184608ec172)
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/f9497f31-511e-484c-a14d-e624caf392b2)
+
+We can confirm the Netowrking settings are okay so we can Review and Create.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/5ec324de-a128-4b94-a565-575adfd5f966)
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/9fca5e03-dd2f-4005-9dc5-51b41bf6df4b)
+
+The next task is to set the DC IP address to static so search Virtual Machines and bring up the DC-1 blade.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/094d1236-9833-4674-b697-ab84784cca55)
+
+
+Under Networking select Network Settings and click on the Newtork Interface. 
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/d0df426f-897a-4ce9-8cc3-209ad0550a20)
+
+<br/>
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/ec10571d-f039-4010-9996-3cd8232c167b)
+
+
+
+
+
+
+
+
+
 
 
 
