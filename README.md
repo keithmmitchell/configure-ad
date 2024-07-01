@@ -128,6 +128,45 @@ Under Networking select Network Settings and click on the Newtork Interface.
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/ec10571d-f039-4010-9996-3cd8232c167b)
 
+In the Network Interface Menu select IP Configurations.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/6f269818-3ea1-4287-9ca1-28f77ad53c82)
+
+From there we can see the IP address is dynamic so click on ipconfig1 and change it to dynamic and Save.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/6a3dd4e8-6af4-4bbc-bdb5-c6ecb5ac0a5e)
+
+<br/>
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/e47701da-e477-4e74-84f6-0159e152de57)
+
+The next task is to ensure connectivity between the DC and Client.  To do that we log into Client-1 and  use the ping -t command which will fail.  If we log into DC-1 and enable ICMPv4 in the local Windows firewall we can then see the pings being sent and received.  
+
+If we go to virtual machines and select Client-1 we can confirm that the public IP address is 172.187.230.132.  
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/59dd5f2e-a628-40e6-b485-77a94d4dde22)
+
+
+Then on the physical machine search remote destkop for Remote Desktop Connection and enter Client-1's IP address 172.187.230.132 then click Connect.
+
+<br />
+
+![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/a27be6e2-6311-4e7e-9a8d-ff8d0cb4f1eb)
+
+<br />
+
+Select More Choices then enter username labuser and password Passw0rd1234 and click OK.
+
+
+
+
+
 
 
 
