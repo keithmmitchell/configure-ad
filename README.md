@@ -659,13 +659,13 @@ On Client-1 navigate to the shared folders by going to File Explorer and enter \
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/95c78dc5-7632-4f06-a8e0-7c2176578bea)
 
-If I try to access the NO Access folder I get the dialog saying I don't have permission.
+If I try to access the No Access folder I get the dialog saying I don't have permission.
 
 <br />
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/b46ef64e-e5a5-496e-86be-ffb3690273a5)
 
-If I open the Read Access folder then right click and select New>Text Document I get a dialog saying access is denied because I need permission.
+If I open the Read Access folder then right click and select New>Text Document I get a dialog saying access is denied because I don't have permission.
 
 <br />
 
@@ -715,7 +715,7 @@ Go back to the C:\ drive and right click the Accounting folder, select Propertie
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/edca0b8e-838e-4fab-8a85-2e0ca473c9fb)
 
-Back in Client-1 I can try and access the folder using the beg.bir account and get a message saying that access is denied.
+Back in Client-1, I can try and access the folder using the beg.bir account and get a message saying that access is denied.
 
 <br />
 
@@ -735,6 +735,6 @@ For the new permissions to work on Client-1 I need to logout then log back in ag
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/5eacd608-84a4-490d-8f55-0030e2e89b15)
 
-That brings us to the end of this tutorial.
+That brings us to the end of this lab.
 
 
