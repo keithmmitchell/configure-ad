@@ -238,7 +238,7 @@ Then Next.
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/816baf0f-b288-4210-be2a-c89e47f579e1)
 
-We can see DC-1 is selected then click NExt.
+We can see DC-1 is selected then click Next.
 
 <br />
 
@@ -286,7 +286,7 @@ In the next window enter a password. For this lab I used Passw0rd.
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/6c3f273f-32cd-49f1-982c-e2ba05b6a66e)
 
-Keep clicking Next then in Additional Options MYDOMAIN will get poulated for the NetBIOS domain name.
+Keep clicking Next then in Additional Options MYDOMAIN will get populated for the NetBIOS domain name.
 
 <br />
 
@@ -298,7 +298,7 @@ Once all the prerequisites have been checked click on Install.
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/f0e172d5-8477-4a87-a44f-270c072c9d7b)
 
-Once it has installed the connection is disconnected and need to reconnect throught Remote Desktop.  Since it is now part of the domain I need to login in with the Fully Qualified Domain Name mydomain.com\labuser.
+Once it has installed the connection is disconnected and needs to reconnect through Remote Desktop.  Since it is now part of the domain I need to login in with the Fully Qualified Domain Name mydomain.com\labuser.
 
 <br />
 
@@ -338,7 +338,7 @@ We will now create a new Admin account by clicking the _ADMINS Organisational Un
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/940a2385-45bd-4784-98ea-4eb0812dd9d0)
 
-Enter a password.  In this lab I used Passw0rd then unchecked password must be changed at next logon and checked password never expires then click Next then Finish.
+Enter a password.  In this lab I used Passw0rd then unchecked password must be changed at next logon and checked password never expires.  Click Next then Finish.
 
 <br />
 
@@ -356,7 +356,7 @@ In the Member Of tab we click Add.
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/880b1a43-9015-48c9-a3b5-aaf42a5d4176)
 
-In Select Groups enter domain then click Check Names then select Domain Admins.
+In Select Groups enter "domain" then click Check Names then select Domain Admins.
 
 <br />
 
@@ -372,13 +372,13 @@ Keep cicking OK for Jane Doe to be a member of Domain Admins.
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/d6d22727-e1cb-4239-ae34-a711cde03671)
 
-Now I Logout, close the Remote Desktop Connection and log back in as mydomain.com\jane_admin. 
+Now logout, close the Remote Desktop Connection and log back in as mydomain.com\jane_admin. 
 
 <br />
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/e0c8019e-c997-4cd7-8a8d-69bf294c61b7)
 
-Next is to joine Client-1 to the domain.  First is to set Client-1's DNS settings to the DC's private IP address from Azure Portal.
+Now Client-1 needs to join the domain.  Set Client-1's DNS settings to the DC's private IP address from Azure Portal.
 
 We can see the private IP address of DC-1 is 10.0.0.4.
 
@@ -444,7 +444,7 @@ Select Domain then entermydomain.com
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/3781941b-f369-44a8-b5d6-377a85b94301)
 
-We are then prompted to enter the credentials of an account with permission to join the domain.  Enter mydomain.com\jane_admin and Passw0rd then click OK.
+We are then prompted to enter the credentials of an account with permission to join the domain.  Enter "mydomain.com\jane_admin" and "Passw0rd" then click OK.
 
 <br />
 
