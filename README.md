@@ -220,7 +220,7 @@ If we go back to Client-1 we can now see the pings are successful and press Ctrl
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/8150122b-89d1-46cd-b772-c1988596d808)
 
-Now we have connectivity we can install Active Directory from Server Manager on DC-1.  Select Add Roles and Features.
+Now we have connectivity and can install Active Directory from Server Manager on DC-1.  Select Add Roles and Features.
 
 <br />
 
