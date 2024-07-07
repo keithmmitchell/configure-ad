@@ -148,7 +148,7 @@ If we go to virtual machines and select Client-1 we can confirm that the public 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/59dd5f2e-a628-40e6-b485-77a94d4dde22)
 
 
-Then on the physical machine search remote destkop for Remote Desktop Connection and enter Client-1's IP address 172.187.230.132 then click Connect.
+On the physical machine search remote destkop for Remote Desktop Connection and enter Client-1's IP address 172.187.230.132 then click Connect.
 
 <br />
 
