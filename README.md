@@ -113,7 +113,7 @@ The next task is to set the DC IP address to static so search Virtual Machines a
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/094d1236-9833-4674-b697-ab84784cca55)
 
 
-Under Networking select Network Settings and click on the Newtork Interface. 
+Under Networking select Network Settings and click on the Network Interface. 
 
 <br />
 
