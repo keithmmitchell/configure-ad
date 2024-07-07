@@ -86,7 +86,7 @@ Create the client machine using the same steps as above with the following confi
 - Username: labuser
 - Password: Passw0rd1234
 
-Then check the box to confirm licensing and then Next to reach Networking.
+Then check the box to confirm licensing and then Next for Networking.
 
 <br />
 
