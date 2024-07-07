@@ -98,7 +98,7 @@ Then check the box to confirm licensing and then Next for Networking.
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/f9497f31-511e-484c-a14d-e624caf392b2)
 
-We can confirm the Netowrking settings are okay so we can Review and Create.
+We can confirm the Networking settings are okay so we can Review and Create.
 
 <br />
 
