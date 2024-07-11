@@ -130,7 +130,7 @@ In the Network Interface Menu select IP Configurations.
 
 ![image](https://github.com/keithmmitchell/configure-ad/assets/174253055/6f269818-3ea1-4287-9ca1-28f77ad53c82)
 
-From there we can see the IP address is dynamic so click on ipconfig1 and change it to dynamic and Save.
+From there we can see the IP address is dynamic so click on ipconfig1 and change it to static and Save.
 
 <br />
 
